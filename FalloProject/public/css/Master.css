@@ -14,6 +14,7 @@ html,body{
   align-content: center;
   padding-top: auto;
   padding-bottom: auto ;
+  border-radius: 36px ;
 }
 
 .CardColRight{
@@ -42,7 +43,16 @@ html,body{
   width: 20%
 }
 
-.imgADS{
-  width: auto;
-  height: 150px;
+.imgADSF{
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
+  width: 100%;
+  height: 25%;
+}
+
+.imgADSL{
+  border-bottom-left-radius: 36px;
+  border-bottom-right-radius: 36px;
+  width: 100%;
+  height: 25%;
 }

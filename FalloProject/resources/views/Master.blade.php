@@ -128,7 +128,7 @@
               @if( auth()->check())
               <div class="card content CardColLeft">
                             <figure style=" position: relative ">
-                                <img src="img/profile-icon-png-898.png" class="img-thumbnail">
+                                <img src="img/profile-icon-png-898.png" class="img-thumbnail" style="position: relative ; padding-top: 25px">
                             </figure>
 
                             <br><br><br><br>
@@ -142,19 +142,18 @@
               @endif
               <!-- Content -->
               <div class="card col-sm-6 text-left  DivContent" >
+
                     <!-- Image Fallo -->
-                    <img src="img/FalloSolo.png" class="imgIcon">
-                @yield('content')
+                    <img src="img/FalloSolo.png" class="imgIcon" >
+
+                    @yield('content')
+
               </div>
               <!-- ADS Bar -->
               <div class="CardColRight" >
                   <center>
-                      <img src="img/ADS1.jpg" class="rounded mx-auto d-block">
-                      <img src="img/ADS1.jpg">
-                      <br>
-                      Test
-                      <br>
-                      <img src="img/ADS/ADS2.jpg">
+                      <img src="img/macAds1.png" class="imgADSF">
+                      <img src="img/macAds.jpg" class="imgADSL">
                   </center>
               </div>
 
