@@ -122,57 +122,48 @@
         </nav>
 
         <div class="container-fluid text-center" style=" position: relative ; top: 100px ;">
-          <div class="row content">
-              <div class="col-sm-1 sidenav"></div>
-              <div class="card col-sm-1 sidenav">
-                <!-- User Menu -->
-                @if( auth()->check())
+          <div class="row">
 
-                    <article class="card"
-                             style=" position: fixed ;
-                                                left: 10% ;
-                                                width: 15% ;
-                                                top: 5% ;
-                                                ">
-
-                        <center>
-                            <figure class="image is-128x128" style=" position: relative ">
-                                <img src="img/profile-icon-def.png"  >
+            <!-- User Menu | Visible que si l'utilisateur est connecté-->
+              @if( auth()->check())
+              <div class="card content CardColLeft">
+                            <figure style=" position: relative ">
+                                <img src="img/profile-icon-png-898.png" class="img-thumbnail">
                             </figure>
 
                             <br><br><br><br>
-                            <ul>
                                 <li><strong>Nom d'utilisateur : </strong> <br>{{ auth()->user()->email }}
+                                  <br>
                                 <li><strong>Date de création : </strong> <br>  {{ auth()->user()->created_at }}
+                                  <br>
                                 <li><strong>Date de modification : </strong> <br>  {{ auth()->user()->updated_at }}
-                            </ul>
-                        </center>
-
-                        <br><br><br><br><br><br><br>
-                    </article>
-                    @endif
+                                  <br><br>
               </div>
-
-              <div class="card col-sm-8 text-left">
+              @endif
+              <!-- Content -->
+              <div class="card col-sm-6 text-left  DivContent" >
                     <!-- Image Fallo -->
-                    <img src="img/FalloSolo.png" style="width: 20%">
-                <h1>Welcome</h1>
+                    <img src="img/FalloSolo.png" class="imgIcon">
                 @yield('content')
               </div>
-
-              <div class="card col-sm-1 sidenav">
-                <div class="well">
-                  <p>ADS</p>
-                </div>
-                <div class="well">
-                  <p>ADS</p>
-                </div>
+              <!-- ADS Bar -->
+              <div class="CardColRight" >
+                  <center>
+                      <img src="img/ADS1.jpg" class="rounded mx-auto d-block">
+                      <img src="img/ADS1.jpg">
+                      <br>
+                      Test
+                      <br>
+                      <img src="img/ADS/ADS2.jpg">
+                  </center>
               </div>
-
-              <div class="col-sm-1 sidenav"></div>
 
           </div>
         </div>
+
+
+
+
         <script src="js/bootstrap.min.js"></script>
 
 </body>
