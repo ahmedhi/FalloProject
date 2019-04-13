@@ -10,7 +10,10 @@
 
 @section('content')
 
-    <form method="post">
+    <form method="post" action="connexion">
+
+        {{ csrf_field() }}
+
         <div class="input-group form-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>

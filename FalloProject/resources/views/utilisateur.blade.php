@@ -1,4 +1,4 @@
-@extends('Xmaster')
+@extends('Master')
 
 @section('title')
     Utilisateur Page

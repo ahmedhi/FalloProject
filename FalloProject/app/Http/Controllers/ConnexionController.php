@@ -11,7 +11,12 @@ class ConnexionController extends Controller
         return view('connexion');
     }
 
-    public function Traitement(){
+    public function traitement(){
+
+        request() -> validate([
+            'email' => ['required' , 'email'],
+            'password' => ['required'],
+        ]);
 
         $connect = auth()->attempt([
             'email' => request('email'),
@@ -19,10 +24,15 @@ class ConnexionController extends Controller
         ]);
 
         if($connect){
-            return 'Traitement formulaire connexion';
+            flash("La connexion a bien été effectuer")->success();
+            return redirect('/mon-compte');
         }
-        else return 'Erreur';
+        else return back()->withInput()->withErrors([
+            'email' => 'votre email est incorrect',
+            'password' => 'votre mot de passe est invalide',
+        ]);
 
     }
+
 
 }
