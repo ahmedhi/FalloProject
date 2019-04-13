@@ -1,0 +1,9 @@
+page-book-list {
+    .is-Dispo{
+        background-color: color($colors, Dispo);
+    }
+
+    .is-InDispo{
+        background-color: color($colors, InDispo);
+    }
+}

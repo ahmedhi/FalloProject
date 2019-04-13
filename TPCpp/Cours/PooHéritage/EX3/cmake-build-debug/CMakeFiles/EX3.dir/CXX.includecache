@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/britos/Documents/TPCpp/Cours/PooHéritage/EX3/header.h
+iostream
+-
+string
+-
+
+/home/britos/Documents/TPCpp/Cours/PooHéritage/EX3/main.cpp
+iostream
+-
+header.h
+/home/britos/Documents/TPCpp/Cours/PooHéritage/EX3/header.h
+

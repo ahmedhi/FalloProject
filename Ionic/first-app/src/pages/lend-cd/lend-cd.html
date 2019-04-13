@@ -1,0 +1,50 @@
+<!--
+  Generated template for the LendCdPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-buttons clear (click)="dismissModal()">
+      Fermer
+    </button>
+    <ion-title>{{ Cd.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{ Cd.name }}
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <button 
+                  ion-button 
+                  full 
+                  color = "danger"
+                  [disabled]= "!Cd.isDis"
+                  (click)=" onToggleCd() ">
+                Reserver
+                </button>
+          </ion-col>
+
+          <ion-col>
+            <button  
+                  ion-button 
+                  full 
+                  color = "secondary"
+                  [disabled]="Cd.isDis"
+                  (click)= "onToggleCd()">
+                Rendre
+              </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

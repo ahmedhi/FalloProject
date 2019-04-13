@@ -1,0 +1,21 @@
+<!--
+  Generated template for the CdListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>CdListPage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let CD of CDList ; let i = index"
+              (click)="onLoadCd(i)"
+              [ngClass]="{ 'is-Dispo' : CD.isDis , 'is-InDispo' : !CD.isDis }">
+              {{ CD.name }}
+            </button>
+  </ion-list>
+</ion-content>
