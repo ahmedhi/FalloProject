@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    HAN Store
                 </div>
 
                 <div class="links">
