@@ -17,11 +17,11 @@ html,body{
 }
 
 .card{
-    height: 370px;
-    margin-top: auto;
+    margin-top: 150px;
     margin-bottom: auto;
     width: 400px;
     background-color: rgba(0,0,0,0.5) !important;
+    border-radius: 36px ;
 }
 
 .social_icon span{
@@ -46,8 +46,10 @@ html,body{
 }
 
 .input-group-prepend span{
-    width: 50px;
-    background-color: #FFC312;
+    position: relative;
+    align-items: center;
+    background-color: #1d8cf8;
+    width: 40px ;
     color: black;
     border:0 !important;
 }
@@ -62,18 +64,10 @@ input:focus{
     color: white;
 }
 
-.remember input
-{
-    width: 20px;
-    height: 20px;
-    margin-left: 15px;
-    margin-right: 5px;
-}
-
 .login_btn{
-    color: black;
-    background-color: #FFC312;
-    width: 100px;
+    color: white;
+    background-color: #1d8cf8;
+    width: auto;
 }
 
 .login_btn:hover{
@@ -87,4 +81,9 @@ input:focus{
 
 .links a{
     margin-left: 4px;
+}
+
+.erreur{
+  color: red;
+  text-align: center;
 }
