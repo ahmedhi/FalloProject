@@ -20,6 +20,8 @@ class CreateArticleTable extends Migration
             $table->string('source');
             $table->string('description');
             $table->string('categorie');
+            $table->integer('Like');
+            $table->integer('DisLike');
             $table->timestamps();
         });
     }

@@ -9,9 +9,21 @@
 @endsection
 
 @section('content')
-        <form method="post" class="section ">
+        <form method="post" class="section " enctype="multipart/form-data">
 
             {{csrf_field()}}
+
+
+            <label class="label">
+              <div class="toggle">
+                <input class="toggle-state" type="checkbox" name="check" id="Verify"value="check" />
+                <div class="toggle-inner">
+                   <div class="indicator"></div>
+                </div>
+                <div class="active-bg"></div>
+              </div>
+              <div class="label-text">leave me alone</div>
+            </label>
 
             <!-- Email -->
             <div class="input-group form-group">
@@ -83,13 +95,13 @@
 
             @endif
 
-            <!-- Photo de profil
+            <!-- Photo de profil -->
             <div class="input-group form-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-images"></i></span>
                 </div>
-                <input type="file" class="form-control" name="image" placeholder="Photo de profil">
-            </div> -->
+                <input type="file" class="form-control" id ="image" name="image" placeholder="Photo de profil" >
+            </div>
 
             <!-- Gestion d'erreur pour le image -->
             @if( $errors->has('image'))
@@ -108,6 +120,27 @@
                         class="form-control" name="num"
                         placeholder="Numero de Téléphone"
                         value="{{ old('num') }}"
+                        pattern="0[0-9]{9}"
+                        >
+            </div>
+
+            <!-- Gestion d'erreur pour le num -->
+            @if( $errors->has('num'))
+                <p class="erreur">
+                    {{ $errors->first('num') }}
+                </p>
+
+            @endif
+
+            <!-- Numero de téléphone Fix -->
+            <div class="input-group form-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-tty "></i></span>
+                </div>
+                <input  type="tel"
+                        class="form-control" name="fix"
+                        placeholder="Numero de Téléphone Fix"
+                        value="{{ old('fix') }}"
                         pattern="0[0-9]{9}"
                         >
             </div>
@@ -433,6 +466,74 @@
                 </p>
 
             @endif
+
+            <br>
+            <div id='partenaire'>
+            <!-- Diplome -->
+            <div class="input-group form-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-graduation-cap "></i></span>
+                </div>
+                <input type="text" class="form-control" name="diplome" placeholder="Dernier diplome" value="{{ old('diplome') }}">
+            </div>
+
+            <!-- Gestion d'erreur pour le diplome -->
+            @if( $errors->has('diplome'))
+                <p class="erreur">
+                    {{ $errors->first('diplome') }}
+                </p>
+
+            @endif
+
+            <!-- Metier -->
+            <div class="input-group form-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-briefcase "></i></span>
+                </div>
+                <input type="text" class="form-control" name="metier" placeholder="Métier actuel" value="{{ old('metier') }}">
+            </div>
+
+            <!-- Gestion d'erreur pour le metier -->
+            @if( $errors->has('metier'))
+                <p class="erreur">
+                    {{ $errors->first('metier') }}
+                </p>
+
+            @endif
+
+            <!-- experience -->
+            <div class="input-group form-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-circle"></i></span>
+                </div>
+                <textarea rows="5" class="form-control" name="experience" placeholder="Experience" value="{{ old('experience') }}"></textarea>
+            </div>
+
+            <!-- Gestion d'erreur pour le experience -->
+            @if( $errors->has('experience'))
+                <p class="erreur">
+                    {{ $errors->first('experience') }}
+                </p>
+
+            @endif
+
+            <!-- Adresse -->
+            <div class="input-group form-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-map-pin "></i></span>
+                </div>
+                <textarea rows="5" class="form-control" name="adresse" placeholder="Adresse" value="{{ old('adresse') }}"></textarea>
+            </div>
+
+            <!-- Gestion d'erreur pour le experience -->
+            @if( $errors->has('adresse'))
+                <p class="erreur">
+                    {{ $errors->first('adresse') }}
+                </p>
+
+            @endif
+
+            </div>
 
             <!-- Boutton de confirmation -->
             <center>

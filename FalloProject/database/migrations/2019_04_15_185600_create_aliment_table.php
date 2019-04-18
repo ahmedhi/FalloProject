@@ -24,8 +24,6 @@ class CreateAlimentTable extends Migration
             $table->double('fibres', 15, 8);
             $table->double('mineraux', 15, 8);
             $table->double('vitamines', 15, 8);
-            $table->integer('like');
-            $table->integer('Dislike');
             $table->timestamps();
         });
     }

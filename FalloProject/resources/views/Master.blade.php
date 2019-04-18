@@ -128,7 +128,7 @@
               @if( auth()->check())
               <div class="card content CardColLeft">
                             <figure style=" position: relative ">
-                                <img src="img/profile-icon-png-898.png" class="img-thumbnail" style="position: relative ; padding-top: 25px">
+                                <img src="img/profilIconDefault.png" class="img-thumbnail" style="position: relative ; padding-top: 25px">
                             </figure>
 
                             <br><br><br><br>

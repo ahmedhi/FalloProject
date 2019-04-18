@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="section">
-        <h1 class="title is-1">{{ $user->email }}</h1>
+        <h1 class="h1">{{ $user->email }}</h1>
 
         @if( auth()->check() AND auth()->user()->id === $user->id)
 
@@ -18,10 +18,12 @@
                     <div class="control">
                         <textarea class="textarea" name="message" placeholder="Qu'avez vous à dire ? "></textarea>
                     </div>
-                    @if($errors->has('message'))
-                        <p class="help is-danger">
+                    @if( $errors->has('message'))
+
+                        <p class="erreur">
                             {{ $errors->first('message') }}
                         </p>
+
                     @endif
                 </div>
 
@@ -52,4 +54,5 @@
         @endforeach
 
     </div>
+
 @endsection
